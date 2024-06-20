@@ -83,7 +83,7 @@ export default function Home() {
                                     placeholder="Transfer"
                                     value={recipient}
                                     onChange={(e) => setRecipient(e.target.value)}
-                                    className="w-full p-3 border rounded-xl"
+                                    className="w-full p-3 border border-gray-400"
                                 />
                             </div>
                             <div className="w-full mb-3">
@@ -92,7 +92,7 @@ export default function Home() {
                                     placeholder="Amount"
                                     value={amount}
                                     onChange={(e) => setAmount(e.target.value)}
-                                    className="w-full p-3 border rounded-xl"
+                                    className="w-full p-3 border border-gray-400"
                                 />
                             </div>
                             {errorMessage && (
@@ -109,12 +109,11 @@ export default function Home() {
                         </div>
                         <div className="w-full px-3 mt-4">
                             <div className="text-center">
-                                <div className="font-bold">Reciever:</div>
+                                <div className="font-bold">Recipient:</div>
                                 <div>{recipient}</div>
                             </div>
-                            <div className="text-center mt-2">
-                                <div className="font-bold">Amount:</div>
-                                <div>{amount} cUSD</div>
+                         
+                              
                             </div>
                         </div>
                         {transactionStatus && (
