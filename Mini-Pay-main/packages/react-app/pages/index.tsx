@@ -116,7 +116,7 @@ export default function Home() {
                          
                               
                             </div>
-                        </div>
+                       
                         {transactionStatus && (
                             <p className="font-light mt-4">
                                 Transaction Status: {transactionStatus}
