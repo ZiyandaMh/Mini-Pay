@@ -21,7 +21,7 @@ function PrimaryButton({
       disabled={disabled ?? loading}
       className={`${
         widthFull ? "w-full" : "px-4"
-      } ${className} font-bold bg-indigo-500 rounded-2xl text-white py-3 flex justify-center items-center`}
+      } ${className} font-bold bg-blue-500 rounded-2xl text-white py-3 flex justify-center items-center`}
     >
       {loading ? <>Loading...</> : title}
     </button>

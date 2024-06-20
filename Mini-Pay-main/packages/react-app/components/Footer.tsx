@@ -41,7 +41,7 @@ const navigation = [
             ))}
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center text-base text-black">&copy; {new Date().getFullYear()} Developed with 🖤 by Justice🐐.</p>
+            <p className="text-center text-base text-black">&copy; {new Date().getFullYear()} Developed with 🖤 by Celo.</p>
           </div>
         </div>
       </footer>
