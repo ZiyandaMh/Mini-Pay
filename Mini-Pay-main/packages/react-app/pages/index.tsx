@@ -69,7 +69,7 @@ export default function Home() {
                     {address && (
                         <>
                         
-                            <div className="text-white-500 text-sm mt-2">Balance:</div>
+                            <div className="text-grey-500 text-sm mt-2">Balance:</div>
                             <div className="font-bold text-lg">{balance} cUSD</div>
                         </>
                     )}
