@@ -65,7 +65,7 @@ export default function Home() {
         <div className="flex flex-col items-center p-4 bg-gray-100">
             <div className="w-full max-w-md bg-white rounded-3xl p-6 shadow-lg">
                 <div className="text-center mb-6">
-                    <h1 className="text-2xl font-bold">X-wave Minipay</h1>
+                    <h1 className="text-2xl font-bold">Welcome to Celo MiniPay DApp</h1>
                     {address && (
                         <>
                             <div className="text-gray-500 text-sm mt-2">Your address:</div>
