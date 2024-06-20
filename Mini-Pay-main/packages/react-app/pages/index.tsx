@@ -85,6 +85,7 @@ export default function Home() {
                                     onChange={(e) => setRecipient(e.target.value)}
                                     className="w-full p-3 border border-gray-400"
                                 />
+                                
                             </div>
                             <div className="w-full mb-3">
                                 <input
