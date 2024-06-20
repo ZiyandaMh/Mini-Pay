@@ -43,7 +43,7 @@ export default function Home() {
             const amountInCUSD = parseFloat(amount);
             const balanceInCUSD = parseFloat(balance);
             if (amountInCUSD > balanceInCUSD) {
-                setErrorMessage("Less Amount to finish this transation.");
+                setErrorMessage("Insufficient balance to complete the transaction.");
                 return;
             }
             setSigningLoading(true);
@@ -62,38 +62,38 @@ export default function Home() {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center">  {/* Background Gradient */}
-            <div className="flex flex-col items-center justify-center h-24 w-48 bg-gradient-to-r from-yellow-500 to-yellow-700 text-white px-8 py-4 shadow-lg hover:bg-gradient-to-l">
+        <div className="flex flex-col items-center p-4 bg-gray-100">
+            <div className="w-full max-w-md bg-white rounded-3xl p-6 shadow-lg">
                 <div className="text-center mb-6">
-                
+                    <h1 className="text-2xl font-bold">X-wave Minipay</h1>
                     {address && (
                         <>
-                        
-                            <div className="text-grey-500 text-sm mt-2">Balance:</div>
+                            <div className="text-gray-500 text-sm mt-2">Your address:</div>
+                            <div className="font-bold text-sm break-all">{address}</div>
+                            <div className="text-gray-500 text-sm mt-2">Your balance:</div>
                             <div className="font-bold text-lg">{balance} cUSD</div>
                         </>
                     )}
                 </div>
                 {address && (
                     <>
-                        <div className="w-full px-3 mt-7">
+                        <div className="flex flex-col items-center">
                             <div className="w-full mb-3">
                                 <input
                                     type="text"
-                                    placeholder="Transfer"
+                                    placeholder="Recipient Address"
                                     value={recipient}
                                     onChange={(e) => setRecipient(e.target.value)}
-                                    className="w-full p-3 border border-gray-400"
+                                    className="w-full p-3 border rounded-xl"
                                 />
-                                
                             </div>
-                            <div className="w-full px-3 mt-7">
+                            <div className="w-full mb-3">
                                 <input
                                     type="text"
                                     placeholder="Amount"
                                     value={amount}
                                     onChange={(e) => setAmount(e.target.value)}
-                                    className="w-full p-3 border border-gray-400"
+                                    className="w-full p-3 border rounded-xl"
                                 />
                             </div>
                             {errorMessage && (
@@ -104,7 +104,7 @@ export default function Home() {
                             <PrimaryButton
                                 loading={signingLoading}
                                 onClick={sendingCUSD}
-                                title="Transact"
+                                title="Send cUSD"
                                 widthFull
                             />
                         </div>
@@ -113,21 +113,22 @@ export default function Home() {
                                 <div className="font-bold">Recipient:</div>
                                 <div>{recipient}</div>
                             </div>
-                         
-                              
+                            <div className="text-center mt-2">
+                                <div className="font-bold">Amount:</div>
+                                <div>{amount} cUSD</div>
                             </div>
-                        
+                        </div>
                         {transactionStatus && (
-                            <p className="font-light mt-4">
-                                Transaction Status: {transactionStatus}
+                            <p className="font-bold mt-4">
+                                Transaction: {transactionStatus}
                             </p>
                             
                         )}
                     </>
                 )}
                 {tx && (
-                    <p className="font-light mt-4 ">
-                        Success:{" "}
+                    <p className="font-bold mt-4">
+                        Tx Completed:{" "}
                         {(tx.transactionHash as string).substring(0, 6)}
                         ...
                         {(tx.transactionHash as string).substring(
