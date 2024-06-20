@@ -76,7 +76,7 @@ export default function Home() {
                 </div>
                 {address && (
                     <>
-                        <div className="flex flex-col items-center">
+                        <div className="w-full px-3 mt-7">
                             <div className="w-full mb-3">
                                 <input
                                     type="text"
@@ -87,7 +87,7 @@ export default function Home() {
                                 />
                                 
                             </div>
-                            <div className="w-full mb-3">
+                            <div className="w-full px-3 mt-7">
                                 <input
                                     type="text"
                                     placeholder="Amount"
