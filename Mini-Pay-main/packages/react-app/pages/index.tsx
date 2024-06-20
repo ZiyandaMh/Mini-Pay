@@ -62,8 +62,8 @@ export default function Home() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-gray-800 to-gray-400">  {/* Background Gradient */}
-            <div className="w-full max-w-md bg-gradient-to-r from-fuchsia-500 to-sky-500 rounded-full px-8 py-10 shadow-xl hover:shadow-2xl animate-pulse">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-white-800 to-white-400">  {/* Background Gradient */}
+            <div className="flex flex-col items-center justify-center h-24 w-48 bg-gradient-to-r from-yellow-500 to-yellow-700 text-white px-8 py-4 shadow-lg hover:bg-gradient-to-l">
                 <div className="text-center mb-6">
                 
                     {address && (
