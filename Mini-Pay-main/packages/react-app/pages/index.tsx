@@ -62,7 +62,7 @@ export default function Home() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600">  {/* Background Gradient */}
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-gray-800 to-gray-400">  {/* Background Gradient */}
             <div className="w-full max-w-md bg-gradient-to-r from-fuchsia-500 to-sky-500 rounded-full px-8 py-10 shadow-xl hover:shadow-2xl animate-pulse">
                 <div className="text-center mb-6">
                 
@@ -83,7 +83,7 @@ export default function Home() {
                                     placeholder="Transfer"
                                     value={recipient}
                                     onChange={(e) => setRecipient(e.target.value)}
-                                    className="w-full p-4 border rounded-xl"
+                                    className="w-full p-3 border rounded-xl"
                                 />
                             </div>
                             <div className="w-full mb-3">
